@@ -31,21 +31,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Validate each field
         let isValid = true;
-        let errorMessages = [];
+        let messages = [];
 
         if (!isValidUsername(username)) {
             isValid = false;
-            errorMessages.push('Username must be at least 3 characters long');
+            messages.push('Username must be at least 3 characters long');
         }
 
         if (!isValidEmail(email)) {
             isValid = false;
-            errorMessages.push('Email must contain both "@" and "." characters');
+            messages.push('Email must contain both "@" and "." characters');
         }
 
         if (!isValidPassword(password)) {
             isValid = false;
-            errorMessages.push('Password must be at least 8 characters long');
+            messages.push('Password must be at least 8 characters long');
         }
 
         // Display feedback
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             feedbackDiv.className = 'success';
             form.reset(); // Clear the form
         } else {
-            feedbackDiv.innerHTML = errorMessages.join('<br>');
+            feedbackDiv.innerHTML = messages.join('<br>');
             feedbackDiv.className = 'error';
         }
     });
