@@ -56,19 +56,6 @@ button:hover {
     width: 100%;
     box-sizing: border-box;
 }
-
-#form-feedback.success {
-    background-color: #dff0d8;
-    color: #28a745;
-    border: 1px solid #d6e9c6;
-}
-
-#form-feedback.error {
-    background-color: #f2dede;
-    color: #dc3545;
-    border: 1px solid #ebccd1;
-}
-
 #form-feedback {
     margin-top: 10px;
     padding: 10px;

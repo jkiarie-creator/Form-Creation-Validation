@@ -51,11 +51,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // Display feedback
         if (isValid) {
             feedbackDiv.textContent = 'Registration successful!';
-            feedbackDiv.className = 'success';
+            feedbackDiv.style.color = '#28a745'; 
             form.reset(); // Clear the form
         } else {
             feedbackDiv.innerHTML = messages.join('<br>');
-            feedbackDiv.className = 'error';
+            feedbackDiv.style.color = '#dc3545';
+            feedbackDiv.style.display = 'block'; // Show the feedback div
         }
     });
 });
