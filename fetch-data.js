@@ -3,7 +3,6 @@ async function fetchUserData(){
     const dataContainer = document.getElementById('api-data');
     try{
         const response = await fetch(apiUrl);
-        if(!response.ok) throw new Error('Network response was not ok');
         const users = await response.json();
         dataContainer.innerHTML = '';
         const userList = document.createElement('ul');
